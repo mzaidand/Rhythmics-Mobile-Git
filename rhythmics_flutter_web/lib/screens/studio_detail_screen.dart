@@ -190,18 +190,8 @@ class _StudioDetailScreenState extends State<StudioDetailScreen> {
     final studio = widget.studio;
     final List<dynamic> rooms = studio['rooms'] as List<dynamic>? ?? [];
 
-    // Determine hero image: first room's first gallery photo or fallback
-    String imageUrl = "https://staticg.sportskeeda.com/editor/2022/11/a9ef8-16681658086025-1920.jpg";
-    if (rooms.isNotEmpty) {
-      final firstRoom = rooms.first as Map<String, dynamic>;
-      final gallery = firstRoom['gallery'] as List<dynamic>? ?? [];
-      if (gallery.isNotEmpty) {
-        final photoUrl = gallery.first['photo_url'] as String?;
-        if (photoUrl != null && photoUrl.isNotEmpty) {
-          imageUrl = 'http://localhost:8080$photoUrl';
-        }
-      }
-    }
+    // Gunakan gambar dari internet secara statis
+    String imageUrl = "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80";
 
     // Build Google Static Map URL
     final latitude = studio['latitude']?.toString() ?? '0';

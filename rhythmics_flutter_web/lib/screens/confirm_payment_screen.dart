@@ -153,6 +153,7 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
       appBar: AppBar(
         title: const Text('Confirm Payment'),
         centerTitle: true,
+        backgroundColor: const Color(0xFFB17457),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
@@ -171,13 +172,13 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                 children: [
                   const Text(
                     "1. Customer Detail and Payment Option",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF6D4C41)),
                   ),
                   const SizedBox(height: 16),
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.indigo.shade700,
+                      color: const Color(0xFF6D4C41),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     padding: const EdgeInsets.all(16),
@@ -194,7 +195,7 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          "Ruangan ${widget.room}",
+                          "Ruangan \\${widget.room}",
                           style: const TextStyle(
                               fontSize: 16, color: Colors.white),
                         ),
@@ -242,7 +243,7 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey.shade300,
+                      backgroundColor: const Color(0xFFD7B7A3),
                       foregroundColor: Colors.black,
                     ),
                     child: const Text("Back"),
@@ -261,13 +262,13 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                 children: [
                   const Text(
                     "2. Review and Confirm Payment",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF6D4C41)),
                   ),
                   const SizedBox(height: 16),
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.indigo.shade700,
+                      color: const Color(0xFF6D4C41),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     padding: const EdgeInsets.all(16),
@@ -283,7 +284,7 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          "${widget.selectedPaymentMethod['category']}  ${widget.selectedPaymentMethod['method']}",
+                          "\\${widget.selectedPaymentMethod['category']}  \\${widget.selectedPaymentMethod['method']}",
                           style: const TextStyle(
                               fontSize: 16, color: Colors.white),
                         ),
@@ -305,7 +306,8 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
                             Text(
-                              formattedTotal, // di React mereka menampilkan price dulu, tapi di ConfirmPayment.jsx Price sudah "price", Tax dan total
+                                NumberFormat.currency(locale: 'id_ID', symbol: 'Rp', decimalDigits: 0)
+                                  .format(widget.price),
                               style:
                                   const TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -353,7 +355,7 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                   const SizedBox(height: 24),
                   const Text(
                     "Studio Terms and Condition",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF6D4C41)),
                   ),
                   const SizedBox(height: 8),
                   const Padding(
@@ -370,13 +372,13 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
                     child: ElevatedButton(
                       onPressed: _isSubmitting ? null : _handleNext,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: _isSubmitting ? Colors.grey : Colors.green.shade400,
+                        backgroundColor: _isSubmitting ? Colors.grey : const Color(0xFFB17457),
                         padding: const EdgeInsets.symmetric(
                             horizontal: 24, vertical: 12),
                       ),
                       child: Text(
                         _isSubmitting ? "Processing..." : "Next",
-                        style: TextStyle(fontSize: 16),
+                        style: const TextStyle(fontSize: 16),
                       ),
                     ),
                   ),

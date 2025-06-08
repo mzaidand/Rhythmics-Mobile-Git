@@ -136,6 +136,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       appBar: AppBar(
         title: const Text('Payment'),
         centerTitle: true,
+        backgroundColor: const Color(0xFFB17457),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
@@ -147,14 +148,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
               children: [
                 const Text(
                   "1. Customer Detail and Payment Option",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF6D4C41)),
                 ),
                 const SizedBox(height: 8),
                 LinearProgressIndicator(
                   value: _progress / 100,
-                  backgroundColor: Colors.grey.shade300,
+                  backgroundColor: Colors.brown.shade100,
                   valueColor:
-                      AlwaysStoppedAnimation<Color>(Colors.green.shade600),
+                      AlwaysStoppedAnimation<Color>(Color(0xFF6D4C41)),
                   minHeight: 8,
                 ),
               ],
@@ -165,7 +166,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.indigo.shade700,
+                color: const Color(0xFF6D4C41),
                 borderRadius: BorderRadius.circular(12),
               ),
               padding: const EdgeInsets.all(16),
@@ -297,7 +298,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.indigo.shade700,
+                color: const Color(0xFF6D4C41),
                 borderRadius: BorderRadius.circular(12),
               ),
               padding: const EdgeInsets.all(16),
@@ -364,7 +365,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               children: [
                 const Text(
                   "Select Payment Option",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF6D4C41)),
                 ),
                 const SizedBox(height: 12),
 
@@ -372,14 +373,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
+                    color: const Color(0xFFD7B7A3),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                   child: const Text(
                     "Virtual Account",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w600),
+                        fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF6D4C41)),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -399,14 +400,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
+                    color: const Color(0xFFD7B7A3),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                   child: const Text(
                     "E-Wallet",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w600),
+                        fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF6D4C41)),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -424,14 +425,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
+                    color: const Color(0xFFD7B7A3),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                   child: const Text(
                     "Credit Card",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w600),
+                        fontSize: 16, fontWeight: FontWeight.w600, color: Color(0xFF6D4C41)),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -453,7 +454,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               child: ElevatedButton(
                 onPressed: _isFormValid() ? _handleNext : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: _isFormValid() ? Colors.green.shade400 : Colors.grey,
+                  backgroundColor: _isFormValid() ? const Color(0xFFB17457) : Colors.grey,
                   padding: const EdgeInsets.symmetric(
                       horizontal: 24, vertical: 12),
                 ),
