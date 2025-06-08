@@ -274,6 +274,7 @@ class _BookingScreenState extends State<BookingScreen> {
             ),
           ],
         ),
+        ),
       ),
     ),
   ),
