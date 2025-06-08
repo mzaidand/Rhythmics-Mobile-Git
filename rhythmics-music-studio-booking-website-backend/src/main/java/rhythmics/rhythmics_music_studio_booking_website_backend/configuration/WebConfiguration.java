@@ -36,7 +36,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:50335", "http://192.168.18.151:50335") // Tambahkan semua origin frontend
+                .allowedOrigins("http://localhost:53022", "http://192.168.18.151:53022") // Tambahkan semua origin frontend
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);

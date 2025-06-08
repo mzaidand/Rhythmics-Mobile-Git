@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rhythmics_flutter_web/services/auth_service.dart';
 import 'package:intl/intl.dart';
 
 class StudioDetailScreen extends StatefulWidget {
@@ -605,7 +604,7 @@ class _StudioDetailScreenState extends State<StudioDetailScreen> {
                                 child: Column(
                                   children: [
                                     Text(
-                                      "Rp${cellPrice}",
+                                      "Rp$cellPrice",
                                       style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold,

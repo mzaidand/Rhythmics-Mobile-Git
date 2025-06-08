@@ -191,11 +191,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         labelText: "Customer Name",
                         labelStyle: const TextStyle(color: Colors.white70),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white54),
+                          borderSide: const BorderSide(color: Colors.white54),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: const BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
@@ -217,11 +217,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         labelText: "Phone Number",
                         labelStyle: const TextStyle(color: Colors.white70),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white54),
+                          borderSide: const BorderSide(color: Colors.white54),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: const BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
@@ -248,11 +248,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         labelText: "Email",
                         labelStyle: const TextStyle(color: Colors.white70),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white54),
+                          borderSide: const BorderSide(color: Colors.white54),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: const BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
@@ -277,11 +277,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         labelText: "Notes (opsional)",
                         labelStyle: const TextStyle(color: Colors.white70),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white54),
+                          borderSide: const BorderSide(color: Colors.white54),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: const BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
@@ -457,9 +457,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 24, vertical: 12),
                 ),
-                child: Text(
+                child: const Text(
                   "Next",
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 16),
                 ),
               ),
             ),

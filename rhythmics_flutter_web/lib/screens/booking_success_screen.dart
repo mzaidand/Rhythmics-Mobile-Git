@@ -18,7 +18,7 @@ class BookingSuccessScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(
+                const Icon(
                   Icons.check_circle_outline,
                   size: 64,
                   color: Colors.white,
