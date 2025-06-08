@@ -1,0 +1,218 @@
+### Create room
+POST http://localhost:8080/api/studios/5/rooms
+Authorization: 9f1bd86e-090d-41f1-93dd-79240ce54a72
+Content-Type: multipart/form-data
+Content-Type: application/json
+
+{
+  "price": 100000,
+  "type": "Futsal",
+  "gallery": [
+    {
+      "photo_url": "https://example.com/photo1.jpg"
+    },
+    {
+      "photo_url": "https://example.com/photo2.jpg"
+    },
+    {
+      "photo_url": "https://example.com/photo3.jpg"
+    }
+  ]
+}
+
+### Get room
+GET http://localhost:8080/api/studios/1/rooms/4
+Authorization: 9f1bd86e-090d-41f1-93dd-79240ce54a72
+
+### Get all room
+GET http://localhost:8080/api/studios/5/rooms
+Authorization: ebaf4f5b-ebb7-48ca-bf89-8da1a343aef4
+
+### Delete room
+DELETE http://localhost:8080/api/studios/3/rooms/5
+Authorization: 61603efa-31a1-485e-9652-5444df5b06b6
+
+### Update room
+PATCH http://localhost:8080/api/rooms/5
+Authorization: 61603efa-31a1-485e-9652-5444df5b06b6
+Content-Type: application/json
+
+{
+  "price": 120000,
+  "type": "Futsal",
+  "gallery": [
+    {
+      "photo_url": "https://example.com/test1.jpg"
+    },
+    {
+      "photo_url": "https://example.com/test2.jpg"
+    },
+    {
+      "photo_url": "https://example.com/test3.jpg"
+    }
+  ],
+  "roomSchedules": [
+    {"status": "not available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "not available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "not available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "not available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "not available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "not available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"},
+    {"status": "available"}
+  ]
+
+}

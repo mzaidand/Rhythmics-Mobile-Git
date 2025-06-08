@@ -1,0 +1,43 @@
+### Create Studio
+POST http://localhost:8080/api/studios
+Authorization: 9f1bd86e-090d-41f1-93dd-79240ce54a72
+Content-Type: application/json
+
+{
+  "name": "FitSpace Sports Arena",
+  "phone_number": "+6281234567890",
+  "street": "Jalan Raya Sport No. 123",
+  "district": "Kecamatan Sporty",
+  "city_or_regency": "Kota Atletik",
+  "province": "Bandung",
+  "postal_code": "12345",
+  "latitude": -6.200000,
+  "longitude": 106.816666
+}
+
+### Get Studio
+GET http://localhost:8080/api/studios/3
+
+### Update Studio
+PATCH http://localhost:8080/api/studios/3
+Authorization: ebaf4f5b-ebb7-48ca-bf89-8da1a343aef4
+Content-Type: application/json
+
+{
+  "name": "FitSpace Sports Arena",
+  "phone_number": "+6281234567890",
+  "street": "Jalan Raya Sport No. 123",
+  "district": "Kecamatan Sporty",
+  "city_or_regency": "Kota Update"
+}
+
+### Delete Studio
+DELETE http://localhost:8080/api/studios/4
+Authorization: daa1b1f2-849c-4942-9eb7-b1927ebfa70d
+
+### Get All Studio
+GET http://localhost:8080/api/studios
+
+### Get All Studio From Some Owner
+GET http://localhost:8080/api/studios/owner
+Authorization: d1cc1fdd-fe12-4bf0-a3cc-25c6c316c006

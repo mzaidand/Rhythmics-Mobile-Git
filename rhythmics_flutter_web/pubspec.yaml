@@ -1,0 +1,31 @@
+name: rhythmics_flutter_web
+description: Flutter Web app untuk fitur registrasi, login, studio detail, payment, dan booking terintegrasi dengan backend Spring Boot
+
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP client untuk berkomunikasi dengan backend
+  http: ^0.13.0
+
+  # Intl untuk format tanggal
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/hero.jpg
+    - assets/regular.jpg
+    - assets/vip.jpg
+    - assets/vvip.jpg
+    - assets/about.png
