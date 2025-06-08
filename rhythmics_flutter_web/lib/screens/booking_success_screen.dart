@@ -66,5 +66,6 @@ class BookingSuccessScreen extends StatelessWidget {
         ),
       ),
     );
+  );
   }
 }
