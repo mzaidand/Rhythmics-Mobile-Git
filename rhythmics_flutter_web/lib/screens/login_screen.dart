@@ -81,9 +81,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Login'), centerTitle: true),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 400),
+            child: Column(
           children: [
             const Icon(Icons.login, size: 100, color: Colors.indigo),
             const SizedBox(height: 16),
@@ -160,7 +163,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ],
         ),
+        ),
       ),
-    );
+    ),
+  );
   }
 }

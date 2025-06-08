@@ -158,11 +158,15 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          final isMobile = constraints.maxWidth < 800;
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+            child: Flex(
+              direction: isMobile ? Axis.vertical : Axis.horizontal,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
             // === Left Side: Booking Information & Checkbox ===
             Expanded(
               flex: 2,
@@ -385,6 +389,8 @@ class _ConfirmPaymentScreenState extends State<ConfirmPaymentScreen> {
             ),
           ],
         ),
+      );
+        },
       ),
     );
   }
