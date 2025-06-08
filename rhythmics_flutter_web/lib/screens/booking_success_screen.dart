@@ -9,13 +9,15 @@ class BookingSuccessScreen extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Container(
-            padding: const EdgeInsets.all(24),
-            decoration: BoxDecoration(
-              color: const Color(0xFFAB886D),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 400),
+            child: Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: const Color(0xFFAB886D),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(

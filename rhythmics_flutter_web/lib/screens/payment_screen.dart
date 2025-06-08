@@ -137,9 +137,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
         title: const Text('Payment'),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
-        child: Column(
+      body: Center(
+        child: SingleChildScrollView(
+          padding:
+              const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 600),
+            child: Column(
           children: [
             // === Progress Bar + Step Title ===
             Column(
@@ -468,7 +472,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
           ],
         ),
       ),
-    );
+    ),
+  );
   }
 
   Widget _buildPaymentIcon(String method, Color bg) {

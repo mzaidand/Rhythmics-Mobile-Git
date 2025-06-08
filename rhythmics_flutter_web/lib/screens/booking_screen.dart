@@ -154,10 +154,13 @@ class _BookingScreenState extends State<BookingScreen> {
         title: const Text('Form Booking'),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 600),
+            child: Column(
+              children: [
             if (_errorMessage != null)
               Container(
                 padding: const EdgeInsets.all(12),
@@ -272,6 +275,8 @@ class _BookingScreenState extends State<BookingScreen> {
           ],
         ),
       ),
-    );
+    ),
+  ),
+);
   }
 }
