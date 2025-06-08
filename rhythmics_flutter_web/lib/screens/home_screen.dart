@@ -116,31 +116,36 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     // Konten teks + tombol
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: isMobile ? 20 : 40,
+                        vertical: 20,
+                      ),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ConstrainedBox(
-                          constraints: BoxConstraints(maxWidth: width * 0.4),
+                          constraints: BoxConstraints(
+                            maxWidth: isMobile ? double.infinity : width * 0.4,
+                          ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Spacer(),
-                              const Text(
+                              Text(
                                 'Book Your Perfect Studio Here.',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 36,
+                                  fontSize: isMobile ? 28 : 36,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               const SizedBox(height: 16),
-                              const Text(
+                              Text(
                                 'From premium soundproof rooms to world-class equipment, '
                                 "we've got everything you need. Discover top-notch music studios "
                                 'and secure your space effortlessly.',
                                 style: TextStyle(
                                   color: Colors.white70,
-                                  fontSize: 18,
+                                  fontSize: isMobile ? 14 : 18,
                                   height: 1.4,
                                 ),
                               ),

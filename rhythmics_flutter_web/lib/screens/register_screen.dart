@@ -84,11 +84,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Register'), centerTitle: true),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            const Icon(Icons.app_registration, size: 100, color: Colors.indigo),
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          final isMobile = constraints.maxWidth < 600;
+          return SingleChildScrollView(
+            padding: EdgeInsets.symmetric(
+              horizontal: isMobile ? 16.0 : 24.0,
+              vertical: 24.0,
+            ),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 400),
+                child: Column(
+                  children: [
+                    Icon(Icons.app_registration,
+                        size: isMobile ? 80 : 100, color: Colors.indigo),
             const SizedBox(height: 16),
             if (_errorMessage != null)
               Container(
@@ -204,6 +214,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
           ],
         ),
+      );
+        },
       ),
     );
   }
